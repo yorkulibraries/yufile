@@ -40,10 +40,10 @@ This requires a current LaTeX installation and some knowledge of the command lin
 
 ## Building the file
 
-+ Copy the template `candidate-file-template.tex` to `Candidate Name Promotion File.tex` or the like.
++ Copy the template `candidate-file-template.tex` to `Candidate-Name-Promotion-File.tex` or the like.
 + Edit the file as needed, changing names, adding links to PDFs, etc.
 + Add PDFs into the `pdfs` directory, using the naming scheme.
-+ Compile the file into one PDF by running `pdflatex Candidate Name Promotion File.tex` *twice* (the second time will generate the table of contents properly).
++ Compile the file into one PDF by running `pdflatex Candidate-Name-Promotion-File.tex` *twice* (the second time will generate the table of contents properly).
 
 ## Contact information
 
