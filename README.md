@@ -42,7 +42,7 @@ All of this can be set out in a spreadsheet (see [example file checklist](file-c
 
 This requires a current LaTeX installation and some knowledge of the command line and file system.
 
-The template uses the  `[pdfpages](https://ctan.org/pkg/pdfpages)` package to include PDFs into the file.  `pdfpages` can't handle Word documents or other formats, so they must be converted to PDFs first.
+The template uses the [`pdfpages`](https://ctan.org/pkg/pdfpages) package to include PDFs into the file.  `pdfpages` can't handle Word documents or other formats, so they must be converted to PDFs first.
 
 ## Building the file
 
