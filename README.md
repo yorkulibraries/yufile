@@ -46,7 +46,7 @@ This requires a current LaTeX installation and some knowledge of the command lin
 + Compile the file into one PDF by running `pdflatex Candidate-Name-Promotion-File.tex` *twice* (the second time will generate the table of contents properly).
 + View `Candidate-Name-Promotion-File.pdf` and appreciate how easy it all was.
 
-See [candidate-file-template.pdf](candidate-file-template.pdf) for an example using placeholder documents and slides.
+See [candidacy-file-template.pdf](candidacy-file-template.pdf) for an example using placeholder documents and slides.
 
 ## Contact information
 
