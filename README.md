@@ -1,6 +1,6 @@
 # LaTeX template for continuing appointment and tenure files
 
-At York University faculty achieve tenure while librarians and archivists achieve continuing appointment, which is equivalent but managed with a slightly different process.  For everyone, a file preparation works with the candidate to build a file that forms the candidate's application for advancement or promotion.  The file is made up of various documents that show the candidate meets all the necessary criteria.
+At York University faculty achieve tenure while librarians and archivists achieve continuing appointment, which is equivalent but managed with a slightly different process.  For everyone, a file preparation committee works with the candidate to build a file that forms the candidate's application for advancement or promotion.  The file is made up of various documents that show the candidate meets all the necessary criteria.  In the Libraries, it will usually be over 300 pages.
 
 + [2021–2024 tenure and promotion, and continuing appointment, document](https://www.yufa.ca/2021_24_t_p)
 + [T&P toolkit for faculty](https://www.yorku.ca/secretariat/senate/tenure-and-promotions-committee/tp-toolkit/)
@@ -42,8 +42,11 @@ This requires a current LaTeX installation and some knowledge of the command lin
 
 + Copy the template `candidate-file-template.tex` to `Candidate-Name-Promotion-File.tex` or the like.
 + Edit the file as needed, changing names, adding links to PDFs, etc.
-+ Add PDFs into the `pdfs` directory, using the naming scheme.
++ Put PDFs in the `pdfs` directory, using the naming scheme.
 + Compile the file into one PDF by running `pdflatex Candidate-Name-Promotion-File.tex` *twice* (the second time will generate the table of contents properly).
++ View `Candidate-Name-Promotion-File.pdf` and appreciate how easy it all was.
+
+See [candidate-file-template.pdf](candidate-file-template.pdf) for an example using placeholder documents and slides.
 
 ## Contact information
 
