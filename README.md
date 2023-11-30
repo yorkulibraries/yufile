@@ -1,6 +1,8 @@
 # LaTeX template for continuing appointment and tenure files
 
-At York University faculty achieve tenure while librarians and archivists achieve continuing appointment, which is equivalent but managed with a slightly different process.  For everyone, a file preparation committee works with the candidate to build a file that forms the candidate's application for advancement or promotion.  The file is made up of various documents that show the candidate meets or exceeds all the necessary criteria.  In the Libraries, it will be a PDF with usually over 300 pages.
+At [York University](https://www.yorku.ca/) (in Toronto, Canada) faculty achieve *tenure* while librarians and archivists achieve *continuing appointment*, which is equivalent but managed slightly differently.  Both processes are documented in the collective agreement of the [York University Faculty Association](https://www.yufa.ca/).
+
+For everyone, a file preparation committee works with the candidate to build a file that forms the candidate's application for advancement or promotion.  The file is made up of various documents that show the candidate meets or exceeds all the necessary criteria.  In the Libraries, it will be a PDF with usually over 300 pages.
 
 + [2021–2024 tenure and promotion, and continuing appointment, document](https://www.yufa.ca/2021_24_t_p)
 + [T&P toolkit for faculty](https://www.yorku.ca/secretariat/senate/tenure-and-promotions-committee/tp-toolkit/)
@@ -10,6 +12,10 @@ Collecting many different documents into one, while managing a table contents an
 Another approach is to use [LaTeX](https://www.latex-project.org/) (see the [Wikipedia entry](https://en.wikipedia.org/wiki/LaTeX) for more, including how to pronounce the name).  It will be most familiar to people in the sciences.  To those who have not used it, LaTeX may appear quite technical at first glance.  It is, but it's possible to use it to make attractive and readable documents with just surface knowledge (admittedly, as long as nothing goes wrong).
 
 Using LaTeX means one constituent document of the file can be replaced and the entire thing regenerated in seconds, with the table of contents and pagination updating automatically.  No tedious manual renumbering is needed.
+
+## Template structure
+
+The template LaTeX file here is structured for librarians and archivists advancing from Pre-Candidacy to Candidacy (staying at Assistant rank) or from Candidacy to continuing appointment (and moving from Assistant to Associate).  Sections could easily be renamed to suit faculty.  Files for candidates applying for promotion to full Professor, Senior Librarian or Senior Archivist would be structured differently.
 
 ## Naming the included PDFs
 
