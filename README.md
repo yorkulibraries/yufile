@@ -7,7 +7,7 @@ At York University faculty achieve tenure while librarians and archivists achiev
 
 Collecting many different documents into one, while managing a table contents and sensible pagination, is not easy.  Reportedly many committees use PDF-XChange Editor or Adobe Acrobat, but this involves a lot of finicky work.
 
-Another approach is to use [LaTeX](https://www.latex-project.org/) (see the [Wikipedia entry](https://en.wikipedia.org/wiki/LaTeX) for more, including how to pronounce the name).  It will be most familiar to people in the sciences.  To those who have not used it, LaTeX may appear quite technical at first glance.  It is, but it's possible to use it to make attractive and readable documents with just surface knowledge of it.
+Another approach is to use [LaTeX](https://www.latex-project.org/) (see the [Wikipedia entry](https://en.wikipedia.org/wiki/LaTeX) for more, including how to pronounce the name).  It will be most familiar to people in the sciences.  To those who have not used it, LaTeX may appear quite technical at first glance.  It is, but it's possible to use it to make attractive and readable documents with just surface knowledge (admittedly, as long as nothing goes wrong).  In this case, using LaTeX means one consitutent document of the file can be replaced and the entire thing regenerated in seconds, with the table of contents and pagination updating automatically.  No tedious manual renumbering is needed.
 
 ## Naming the included PDFs
 
@@ -28,7 +28,7 @@ PDFs should have names that begin with their location in the file and (except fo
 + B 2.1.1 Presentation slides.pdf
 + B 3.1.1 Association report.pdf
 + C 1.1.1 Library committee report.pdf
-+ C 1.2.1 Univrersity committee report.pdf
++ C 1.2.1 University committee report.pdf
 
 All of this can be set out in a spreadsheet, which can first be used to plan the contents and then to note whether the pieces have been found and are in place.
 
@@ -41,8 +41,13 @@ This requires a current LaTeX installation and some knowledge of the command lin
 ## Building the file
 
 + Copy the template `candidate-file-template.tex` to `Candidate Name Promotion File.tex` or the like.
-+ Edit the file as needed, changing names, adding PDFs, etc.
-+ Compile into a PDF by running `pdflatex Candidate Name Promotion File.tex` *twice* (the second time will generate the table of contents properly).
++ Edit the file as needed, changing names, adding links to PDFs, etc.
++ Add PDFs into the `pdfs` directory, using the naming scheme.
++ Compile the file into one PDF by running `pdflatex Candidate Name Promotion File.tex` *twice* (the second time will generate the table of contents properly).
+
+## Contact information
+
+Contact York librarian William Denton <wdenton@yorku.ca> with questions or problems.
 
 ## License
 
