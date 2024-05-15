@@ -46,7 +46,7 @@
 % http://tex.stackexchange.com/questions/11698/pdf-inclusion-found-pdf-version-1-5-but-at-most-version-1-4-allowed
 
 % Suppress warnings like this:
-% pdfTeX warning: pdflatex (file ./pdfs/B 2.2.1 Introduction to Data Visualization for Research.pdf): PDF inclusion: multiple pdfs with page group included in a single page
+% pdfTeX warning: pdflatex (file ./pdfs/B 2.2.1 Title.pdf): PDF inclusion: multiple pdfs with page group included in a single page
 \pdfsuppresswarningpagegroup=1
 
 % For better table formatting
@@ -55,7 +55,6 @@
 %\usepackage{longtable}
 
 % Put headings in small caps
-% http://tex.stackexchange.com/questions/45248/headings-in-uppercase5
 % \usepackage{sectsty}
 % \allsectionsfont{\mdseries\scshape}
 % \sectionfont{\mdseries\scshape}
@@ -131,6 +130,17 @@
 {\large Candidate's note:}
 \begin{quote}
   \fontfamily{phv}\selectfont
+  {\small #1}
+\end{quote}
+}
+
+%% Committee notes
+% \committeenote adds a note from the FPC, in italics.
+\newcommand{\committeenote}[1] {%
+\par\noindent\rule{\textwidth}{1pt}
+{\large File Preparation Committee note:}
+\begin{quote}
+  \itshape{}
   {\small #1}
 \end{quote}
 }
@@ -237,7 +247,7 @@
   This is a note from the candidate.  It has a different typeface and stands out from the rest of the file.
 }
 
-\includepdf[pages=-,nup=1x2,delta=5mm 5mm,landscape=false]{pdfs/example-slides.pdf} % chktex 29
+\includepdf[pages=-,nup=1x2,delta=5mm 5mm,landscape=false,pagecommand={}]{pdfs/example-slides.pdf} % chktex 29
 
 \section{Reference}
 
@@ -277,7 +287,7 @@ A citation to the article goes here.  Do not include the article itself.
   \item Slides from talk.
 \end{itemize}
 
-\includepdf[pages=-,nup=2x3,delta=5mm 5mm,landscape=false]{pdfs/example-slides.pdf} % chktex 29
+\includepdf[pages=-,nup=2x3,delta=5mm 5mm,landscape=false,pagecommand={}]{pdfs/example-slides.pdf} % chktex 29
 
 \section{Professional Associations}
 
@@ -313,6 +323,10 @@ A citation to the article goes here.  Do not include the article itself.
 \begin{itemize}
   \item The annual report of the committee.
 \end{itemize}
+
+\committeenote{The {\tt committeenote} command can be used to add a note from the File Preparation Committee, briefly explaining something, for example that most of the work of the committee is confidential in nature.  Committee notes are in italics.}
+
+\candidatenote{A candidate's note can go on the same page.}
 
 \includepdf[pages=-,scale=0.95,pagecommand={}]{pdfs/example-1.pdf}
 

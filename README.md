@@ -60,6 +60,8 @@ The template uses the [`pdfpages`](https://ctan.org/pkg/pdfpages) package to inc
 
 See [candidacy-file-template.pdf](candidacy-file-template.pdf) for an example using placeholder documents and slides.
 
+Use `\candidatenote{}` for candidate's notes and `\committeenote{}` for notes from the committee.
+
 ## Contact information
 
 Contact York librarian William Denton <wdenton@yorku.ca> with questions or problems.
