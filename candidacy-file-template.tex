@@ -98,7 +98,7 @@
 \PassOptionsToPackage{hyphens}{url}
 \usepackage[pdfborder={0 0 0},colorlinks=true,urlcolor=blue]{hyperref}
 
-% With this I can say \link{http://example.com/} and it makes it a hyperlink wrapped in < >
+% With this I can say \link{https://example.com/} and it makes it a hyperlink wrapped in < >
 \newcommand{\link}[1]{{\small $<$\url{#1}$>$}}
 
 % Add PDF properties (part of hyperref)
@@ -263,6 +263,7 @@
 
 \begin{figure}[H]
   \includegraphics[height=4in]{images/yul 1121686_Medium_sized_JPEG.jpg}
+  % \href makes a hyperlink with anchor text.
   \caption{The Steacie Science Library in 1965. \\ \href{https://digital.library.yorku.ca/yul-1121686/steacie-science-library-interior-view}{View in YUDL}.}
 \end{figure}
 
@@ -275,11 +276,25 @@
 
 \subsection{``Article Title'' (\textit{Journal Title})}
 
-A citation to the article goes here.  Do not include the article itself.
+% Note that "quotes" won't look fancy.  You need to use ``two single quotes''.  That's just how LaTeX works.
+
+(Do not include the article itself.  Use the citation, which could look like this.)
+
+% Ampersands need to have a backslash in front of them.
+
+Wakaruk, Amanda, Céline Gareau-Brennan, and Matthew Pietrosanu. ``Introducing the Copyright Anxiety Scale.'' \textit{Journal of Copyright in Education \& Librarianship} 5, no. 1 (September 2021). \url{https://doi.org/10.17161/jcel.v5i1.15212}.
 
 \vspace{\baselineskip}
 
-\committeenote{A note from the committee can be added with {\tt committeenote}, where necessary.  It is in italics.}
+\committeenote{A note from the committee can be added with {\tt committeenote}, where necessary.  It is in italics.
+
+  This can be used to include the brief collaborator statements about the candidate's contributions.
+
+  One co-author said, ``The candidate did A, B and C.''
+
+  Another co-author said, ``The candidate contributed to sections X and Y.''
+
+}
 
 \newpage
 
@@ -330,7 +345,9 @@ A citation to the article goes here.  Do not include the article itself.
 
 \committeenote{The FPC might need to add a brief note explaining that most of the work of a committee is confidential in nature.}
 
-\candidatenote{A candidate's note can go on the same page as a committee note.}
+\candidatenote{A candidate's note can go on the same page as a committee note.
+
+It can have two paragraphs and \textit{text in italics}.}
 
 \includepdf[pages=-,scale=0.95,pagecommand={}]{pdfs/example-1.pdf}
 
