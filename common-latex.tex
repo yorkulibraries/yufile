@@ -3,6 +3,9 @@
 % Specify the font.
 \usepackage{fourier} % Adobe Utopia
 
+\usepackage{microtype}
+\microtypecontext{spacing=nonfrench}
+
 % For better formatting in the table listing referees
 \usepackage{array}
 
@@ -11,9 +14,6 @@
 
 \setlength{\headheight}{15pt}
 
-\usepackage{microtype}
-\microtypecontext{spacing=nonfrench}
-
 % Say "A", not "Chapter A", by removing the word \chapter.
 \renewcommand{\chaptername}{}
 
@@ -21,7 +21,7 @@
 \newcommand*{\notefont}{\fontfamily{phv}\selectfont}
 
 % To include images
-% \usepackage{graphicx}
+\usepackage{graphicx}
 
 % Tighter lists.
 \usepackage{enumitem}
@@ -68,8 +68,20 @@
 \usepackage{fancyhdr}
 \pagestyle{fancy}
 \fancyhf{}
-%  \thepage, \thesubsection etc.  \leftmark is chapter title, \rightmark is section title
+% \thepage, \thesubsection etc.  \leftmark is chapter title, \rightmark is section title
 % \renewcommand{\headrulewidth}{1pt}
+
+\fancyhead[C]{\nouppercase{\rightmark}}
+% \fancyfoot[L]{Name Here}
+\fancyfoot[C]{\leftmark}
+\fancyfoot[R]{\thepage}
+
+\fancypagestyle{plain}{%
+  \fancyhf{}%
+  % \fancyfoot[L]{Name Here}
+  \fancyfoot[C]{\leftmark}
+  \fancyfoot[R]{\thepage}
+}
 
 \newcommand{\chaptertitle}{}
 \renewcommand{\chaptermark}[1]{\renewcommand{\chaptertitle}{Chapter \thechapter\ #1}}
@@ -97,13 +109,39 @@
   linkcolor=black % Other TOC listings, and internal links, are in red
 }
 
+%% Attachments
 % \attached puts a short horizontal rule, with some space above and below,
 % which I'll follow with a list of the attachments for the section.
+% This isn't used, but I'll leave it in just in case.
 \newcommand{\attached}{%
 \vspace{1em}
 \noindent\rule{8cm}{0.4pt}
 \newline
 \vspace{1em} Attached:
+}
+
+%% Candidate's notes
+% \candidatenote adds a note from the candidate, formatted (with a
+% different typeface) so it looks noticeably different from the rest
+% of the file.  The phv font is a Helvetica clone.
+\newcommand{\candidatenote}[1] {%
+\par\noindent\rule{\textwidth}{1pt}
+{\large Candidate's note:}
+\begin{quote}
+  \fontfamily{phv}\selectfont
+  {\small #1}
+\end{quote}
+}
+
+%% Committee notes
+% \committeenote adds a note from the FPC, in italics.
+\newcommand{\committeenote}[1] {%
+\par\noindent\rule{\textwidth}{1pt}
+{\large File Preparation Committee note:}
+\begin{quote}
+  \itshape{}
+  {\small #1}
+\end{quote}
 }
 
 % No paragraph indent.

@@ -6,20 +6,12 @@
 
 \input{common-latex.tex}
 
-% We're using the fancyhdr package.
-% \leftmark is chapter title, \rightmark is section title
-% These are similar but both need to be defined.
-
-\fancyhead[C]{\nouppercase{\rightmark}}
+% Footers: Put the last name in both these places.
+% The rest of the footer is configured in common-latex.tex.
 \fancyfoot[L]{Name}
-\fancyfoot[C]{\leftmark}
-\fancyfoot[R]{\thepage}
 
 \fancypagestyle{plain}{%
-  \fancyhf{}%
   \fancyfoot[L]{Name}
-  \fancyfoot[C]{\leftmark}
-  \fancyfoot[R]{\thepage}
 }
 
 \begin{document}
@@ -36,7 +28,7 @@
     {\Large Candidate Name }
     \vspace{1cm}
 
-    {\large dd Mon 2024 }
+    {\large dd Month 2024 }
 
 \end{center}
 

@@ -2,149 +2,24 @@
 
 \title{Application for Promotion to Candidacy}
 \author{File Preparation Committee}
-\date{2023}
+\date{2024}
 
-\usepackage[T1]{fontenc}
-\usepackage{fourier} % Adobe Utopia
-
-\usepackage[activate={true,nocompatibility},final,tracking=true,kerning=true,spacing=true,factor=1100,stretch=10,shrink=10]{microtype}
-\microtypecontext{spacing=nonfrench}
+\input{common-latex.tex}
 
 % DRAFT: comment this out when it's not a draft.
 % \usepackage[firstpageonly=true,scale=1.5]{draftwatermark}
 
-% For better formatting in the table listing referees
-\usepackage{array}
-
-% To allow H location for image floating (meaning "right here")
-\usepackage{float}
-
-\usepackage[margin=2cm]{geometry}
-
-\setlength{\headheight}{15pt}
-
-% \renewcommand{\thechapter}{\Roman{chapter}}
-
-% Say "A", not "Chapter A", by removing the word \chapter.
-\renewcommand{\chaptername}{}
-
-% To include images
-% \usepackage{graphicx}
-
-% Tighter lists.
-\usepackage{enumitem}
-\setlist{noitemsep}
-
-% So I can include other PDFs. Section and page numbering are all handled perfectly.
-\usepackage{pdfpages}
-% When including slides I do this to make a 2x3 layout:
-% \includepdf[pages=-,nup=2x3,delta=5mm 5mm,landscape=false]{filename.pdf}
-% \includepdf[pages=-,scale=0.8,pagecommand=\thispagestyle{plain}]{0-0-3-job-description-2011.pdf}
-
-% Fix warnings like this:
-% pdfTeX warning: pdflatex (file ./pdfs/B 2.2.1 Title.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-\pdfoptionpdfminorversion=7
-
-% Suppress warnings like this:
-% pdfTeX warning: pdflatex (file ./pdfs/B 2.2.1 Title.pdf): PDF inclusion: multiple pdfs with page group included in a single page
-\pdfsuppresswarningpagegroup=1
-
-% For better table formatting
-%\usepackage{multirow}
-%\usepackage{rotating}
-%\usepackage{longtable}
-
-% Put headings in small caps
-% \usepackage{sectsty}
-% \allsectionsfont{\mdseries\scshape}
-% \sectionfont{\mdseries\scshape}
-
-% Start numbering sections at 0.
-\setcounter{section}{-1}
-\setcounter{chapter}{-1}
-
-% Nice headers.
-\usepackage{fancyhdr}
-\pagestyle{fancy}
-\fancyhf{}
-%  \thepage, \thesubsection etc.  \leftmark is chapter title, \rightmark is section title
-% \renewcommand{\headrulewidth}{1pt}
-\fancyhead[C]{\nouppercase{\rightmark}} % \leftmark is chapter title, \rightmark is section title
-\fancyfoot[L]{Name Here} % \leftmark is chapter title, \rightmark is section title
-\fancyfoot[C]{\leftmark} % \leftmark is chapter title, \rightmark is section title % Could use \textcolor{red}{Wong}
-\fancyfoot[R]{\thepage} % \leftmark is chapter title, \rightmark is section title
-
-% Found this on Stack Exchange
-% TODO Add link
-\newcommand{\chaptertitle}{}
-\renewcommand{\chaptermark}[1]{\renewcommand{\chaptertitle}{Chapter \thechapter\ #1}}
-\renewcommand{\sectionmark}[1]{\markboth{\thesection\ #1}{}}
-\renewcommand{\subsectionmark}[1]{\markright{\thesubsection\ #1}}
-
-\renewcommand{\footrule}{\hbox to\headwidth{\color{red}\leaders\hrule height \headrulewidth\hfill}}
+% Footers: Put the last name in both these places.
+% The rest of the footer is configured in common-latex.tex.
+\fancyfoot[L]{Name}
 
 \fancypagestyle{plain}{%
-  % To make chapter pages look like the other pages.
-  % https://tex.stackexchange.com/questions/117328/fancyhdr-does-not-apply-same-header-footer-on-chapter-and-non-chapter-pages
-  \fancyhf{}%
-  \fancyfoot[L]{Name Here} % \leftmark is chapter title, \rightmark is section title % Could use \textcolor{red}{Wong}
-  \fancyfoot[C]{\leftmark} % \leftmark is chapter title, \rightmark is section title % Could use \textcolor{red}{Wong}
-  \fancyfoot[R]{\thepage} % \leftmark is chapter title, \rightmark is section title
+  \fancyfoot[L]{Name}
 }
 
-% Turn \url and \href into hyperlinks in PDFs, and pass hyphens option to url package
-% (which hyperref calls) to get better line breaks.
-% http://tex.stackexchange.com/questions/3033/forcing-linebreaks-in-url?rq=1
-\PassOptionsToPackage{hyphens}{url}
-\usepackage[pdfborder={0 0 0},colorlinks=true,urlcolor=blue]{hyperref}
-
-% With this I can say \link{https://example.com/} and it makes it a hyperlink wrapped in < >
-\newcommand{\link}[1]{{\small $<$\url{#1}$>$}}
-
-% Add PDF properties (part of hyperref)
-\hypersetup{%
-  bookmarksnumbered, % To get A 1.2 etc. into the bookmarks
-  pdfauthor={File Preparation Committee},
-  pdfsubject={},
-  pdftitle={Application for Promotion},
-  pdfkeywords={},
-  linkcolor=black % Other TOC listings, and internal links, are in red
-}
-
-%% Attachments
-% \attached puts a short horizontal rule, with some space above and below,
-% which I'll follow with a list of the attachments for the section.
-% This isn't used, but I'll leave it in just in case.
-\newcommand{\attached}{%
-\vspace{1em}
-\noindent\rule{8cm}{0.4pt}
-\newline
-\vspace{1em} Attached:
-}
-
-%% Candidate's notes
-% \candidatenote adds a note from the candidate, formatted (with a
-% different typeface) so it looks noticeably different from the rest
-% of the file.  The phv font is a Helvetica clone.
-\newcommand{\candidatenote}[1] {%
-\par\noindent\rule{\textwidth}{1pt}
-{\large Candidate's note:}
-\begin{quote}
-  \fontfamily{phv}\selectfont
-  {\small #1}
-\end{quote}
-}
-
-%% Committee notes
-% \committeenote adds a note from the FPC, in italics.
-\newcommand{\committeenote}[1] {%
-\par\noindent\rule{\textwidth}{1pt}
-{\large File Preparation Committee note:}
-\begin{quote}
-  \itshape{}
-  {\small #1}
-\end{quote}
-}
+% Start numbering sections at 0.  You can leave this alone.
+\setcounter{section}{-1}
+\setcounter{chapter}{-1}
 
 \begin{document}
 
@@ -173,7 +48,7 @@
 
     \vspace{1cm}
 
-    dd Month 20nn
+    dd Month 2024
 
   }
 
