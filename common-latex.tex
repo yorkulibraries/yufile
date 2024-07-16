@@ -1,0 +1,115 @@
+\usepackage[T1]{fontenc}
+
+% Specify the font.
+\usepackage{fourier} % Adobe Utopia
+
+% For better formatting in the table listing referees
+\usepackage{array}
+
+% Page margins.
+\usepackage[margin=2cm]{geometry}
+
+\setlength{\headheight}{15pt}
+
+\usepackage{microtype}
+\microtypecontext{spacing=nonfrench}
+
+% Say "A", not "Chapter A", by removing the word \chapter.
+\renewcommand{\chaptername}{}
+
+% Candidate's notes
+\newcommand*{\notefont}{\fontfamily{phv}\selectfont}
+
+% To include images
+% \usepackage{graphicx}
+
+% Tighter lists.
+\usepackage{enumitem}
+\setlist{noitemsep}
+
+% For rules in tables
+\usepackage{booktabs}
+
+% For better formatting in the table listing referees
+\usepackage{array}
+
+% To allow H location for image floating (meaning "right here")
+\usepackage{float}
+
+% Figures float, but minipages don't, so these let me
+% me put graphics where I want, labelled, with captions.
+% \usepackage{wrapfig}
+% \usepackage{caption}
+
+% To include other PDFs. Section and page numbering are all handled perfectly.
+\usepackage{pdfpages}
+% When including slides do this to make a 2x3 layout:
+% \includepdf[pages=-,nup=2x3,delta=5mm 5mm,landscape=false]{filename.pdf}
+
+% I was getting errors like this:
+% pdfTeX warning: pdflatex (file ./2-4-1-lrts-frbr-book-review.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
+% but this fixes it:
+\pdfoptionpdfminorversion=7
+
+% Suppress warnings like this:
+% pdfTeX warning: pdflatex (file ./pdfs/B 2.2.1 Introduction to Data Visualization for Research.pdf): PDF inclusion: multiple pdfs with page group included in a single page
+\pdfsuppresswarningpagegroup=1
+
+% For better table formatting
+%\usepackage{multirow}
+%\usepackage{rotating}
+%\usepackage{longtable}
+
+% Start numbering sections at 0.  Because that's where numbering starts.
+% \setcounter{section}{-1}
+% \setcounter{chapter}{-1}
+
+% Nice headers.
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhf{}
+%  \thepage, \thesubsection etc.  \leftmark is chapter title, \rightmark is section title
+% \renewcommand{\headrulewidth}{1pt}
+
+\newcommand{\chaptertitle}{}
+\renewcommand{\chaptermark}[1]{\renewcommand{\chaptertitle}{Chapter \thechapter\ #1}}
+\renewcommand{\sectionmark}[1]{\markboth{\thesection\ #1}{}}
+\renewcommand{\subsectionmark}[1]{\markright{\thesubsection\ #1}}
+
+% Colours red the line above the footer.
+\renewcommand{\footrule}{\hbox to\headwidth{\color{red}\leaders\hrule height \headrulewidth\hfill}}
+
+% Turn \url and \href into hyperlinks in PDFs, and pass hyphens option to url package
+% (which hyperref calls) to get better line breaks.
+% http://tex.stackexchange.com/questions/3033/forcing-linebreaks-in-url?rq=1
+\PassOptionsToPackage{hyphens}{url}\usepackage[pdfborder={0 0 0},colorlinks=true,urlcolor=blue]{hyperref}
+
+% With this I can say \link{https://example.com/} and it makes it a hyperlink wrapped in < >
+\newcommand{\link}[1]{{\small $<$\url{#1}$>$}}
+
+% Add PDF properties (part of hyperref)
+\hypersetup{%
+  bookmarksnumbered, % To get A 1.2 etc. into the bookmarks
+  pdfauthor={File Preparation Committee},
+  pdfsubject={},
+  pdftitle={Letters of Reference},
+  pdfkeywords={},
+  linkcolor=black % Other TOC listings, and internal links, are in red
+}
+
+% \attached puts a short horizontal rule, with some space above and below,
+% which I'll follow with a list of the attachments for the section.
+\newcommand{\attached}{%
+\vspace{1em}
+\noindent\rule{8cm}{0.4pt}
+\newline
+\vspace{1em} Attached:
+}
+
+% No paragraph indent.
+% \setlength{\parindent}{0pt}
+% \setlength{\parskip}{\baselineskip}
+
+% Remove the page numbers from the TOC.
+% \let\Contentsline\contentsline
+% \renewcommand\contentsline[3]{\Contentsline{#1}{#2}{}}

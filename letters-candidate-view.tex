@@ -1,0 +1,108 @@
+\documentclass[12pt,oneside]{book}
+
+\title{Letters of Reference for Candidate}
+\author{File Preparation Committee for Candidate}
+\date{2024}
+
+\input{common-latex.tex}
+
+% We're using the fancyhdr package.
+% \leftmark is chapter title, \rightmark is section title
+% These are similar but both need to be defined.
+
+\fancyhead[C]{\nouppercase{\rightmark}}
+\fancyfoot[L]{Name}
+\fancyfoot[C]{\leftmark}
+\fancyfoot[R]{\thepage}
+
+\fancypagestyle{plain}{%
+  \fancyhf{}%
+  \fancyfoot[L]{Name}
+  \fancyfoot[C]{\leftmark}
+  \fancyfoot[R]{\thepage}
+}
+
+\begin{document}
+
+\begin{titlepage}
+
+  \null\vfill
+
+  \begin{center}
+
+    {\Huge Letters of Reference
+
+      \vspace{\baselineskip}
+
+      (Candidate's View)
+    }
+
+    \vspace{2cm}
+
+    {\Large Candidate Name }
+    \vspace{1cm}
+
+    {\large dd Mon 2024 }
+
+\end{center}
+
+\vfill
+\vfill
+
+{\large
+  File Preparation Committee:
+
+  Name One (Associate Archivist), chair \\
+  \indent Name Two (Associate Librarian) \\
+  \indent Name Three (Associate Librarian)
+
+}
+
+\hfill
+
+\end{titlepage}
+
+\tableofcontents
+\markboth{}{}
+
+\chapter{Letters of reference}
+
+Some referees were drawn from inside York University and some externally.  External Reviewer at Example University was the arm's length external reviewer.
+
+\vspace{3cm}
+
+List of referees (the letters are not in the same order as the names):
+
+\vspace{1cm}
+
+% Shuffle up the names here so they don't match the order of the letters.
+
+\begin{tabular}{l >{\raggedright}p{4cm} >{\raggedright}p{6cm} l}
+  Name & Affiliation & Role & Section \\
+  \toprule
+  Name & C University & Title, Department & Service \\
+  Name & E University & Title, Department & PCS \\
+  Name & Example University & Title, Department & External \\
+  Name & A University & Title, Department & PPK \\
+  Name & D University & Title, Department & All \\
+  Name & B University & Title,Department & PPK \\
+  \end{tabular}
+
+\newpage
+
+\fancyfoot[C]{\leftmark} % \leftmark is chapter title, \rightmark is section title
+
+\includepdf[pages=2-,scale=0.95,pagecommand={\section*{Letter 1}}]{letters/letter-1.pdf} % chktex 8
+\includepdf[pages=2-,scale=0.95,pagecommand={\section*{Letter 2}}]{letters/letter-1.pdf} % chktex 8
+
+\chapter{Sample letters of solicitation}
+
+Included here to represent the solicitations sent to referees are letters to A (for PPK), B (Service) and Example Reviewer (the external arm's length reviewer).  Also included is the brief summary the FPC sent, which quotes relevant text from, and links to, \textit{Criteria and Procedures for Promotion and Continuing Appointments of Professional Librarians and Archivists}.
+
+\includepdf[pages=-,scale=1,pagecommand={\section*{Request to A}}]{letters/letter-2.pdf} % chktex 8
+\includepdf[pages=-,scale=1,pagecommand={\section*{Request to B}}]{letters/letter-2.pdf} % chktex 8
+\includepdf[pages=-,scale=1,pagecommand={\section*{Request to Example Reviewer}}]{letters/letter-2.pdf} % chktex 8
+
+\includepdf[pages=-,scale=1,pagecommand={}]{letters/Pre-Candidacy Documentation.pdf} % chktex 8
+
+\end{document}
